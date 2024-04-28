@@ -11,7 +11,7 @@ whois -h whois.radb.net -- "-i origin AS141995" | awk '/^route:/ {print $2}' | w
     ufw deny from "$ip_address" comment "Common scanner"
 done
 
-echo "[+] Blocking digital ocean... (AS14061)
+echo "[+] Blocking digital ocean... (AS14061)"
 whois -h whois.radb.net -- "-i origin AS14061" | awk '/^route:/ {print $2}' | while read -r ip_address; do
     ufw deny from "$ip_address" comment "Common scanner"
 done
