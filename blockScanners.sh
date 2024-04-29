@@ -1,5 +1,5 @@
 echo "[+] Blocking pfcloud... (AS51396)"
-whois -h whois.radb.net -- "-i origin AS2501" | awk '/^route:/ {print $2}' | while read -r ip_address; do
+whois -h whois.radb.net -- "-i origin AS51396" | awk '/^route:/ {print $2}' | while read -r ip_address; do
     ufw deny from "$ip_address" comment "Common scanner"
 done
 
