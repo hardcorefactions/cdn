@@ -1,5 +1,7 @@
 **Inside crontab**
+```bash
 0 * * * * /etc/cron.hourly/blocklist.sh >> /var/log/blocklist.log 2>&1
+```
 
 **blocklist.sh script**
 ```bash
